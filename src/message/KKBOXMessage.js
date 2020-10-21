@@ -28,7 +28,7 @@ module.exports = class KKBOXMessage extends Message {
                     action: {
                         type: 'uri',
                         uri: `${url}`,
-                        label: `${el.title}`.slice(0, 12),
+                        label: `${el.title}`.slice(0, 12), //why 12? 為了讓顯示不會超過
                     }
                 }
             });
@@ -39,7 +39,7 @@ module.exports = class KKBOXMessage extends Message {
                     imageUrl: el.album.images[1].url,
                     action: {
                         type: 'uri',
-                        label: `${el.name}`.slice(0, 12),
+                        label: `${el.name}`.slice(0, 12), 
                         uri: `https://widget.kkbox.com/v1/?id=${el.id}&type=song&terr=TW&lang=TW`
                     }
                 }
